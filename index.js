@@ -121,9 +121,22 @@ app.use((req, res, next) => {
     next();
 });
 
-// Serve frontend for all non-API routes
-app.use((req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// API root endpoint
+app.get('/', (req, res) => {
+    res.json({
+        success: true,
+        message: 'Roi Beauty Essence API',
+        version: '1.0.0',
+        endpoints: {
+            products: '/api/products',
+            auth: '/api/auth',
+            payment: '/api/payment',
+            orders: '/api/orders',
+            admin: '/api/admin',
+            contact: '/api/contact',
+            health: '/api/health'
+        }
+    });
 });
 
 // Global error handler
