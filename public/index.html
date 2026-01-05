@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoiBeautyEssence - Natural Skincare Collection</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💄</text></svg>">
+    <!-- FIXED CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://js.stripe.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' http://localhost:3000 https://api.stripe.com https://roi-beauty-api.onrender.com https://*.render.com; frame-src https://js.stripe.com;">
+    <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      crossorigin="anonymous"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>RoiBeautyEssence</h1>
+                <p>Elegance and Beauty Redefined</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="home-link">Home</a></li>
+                <li><a href="#" class="catalog-link">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cart-link cart-icon"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a></li>
+                <li><a href="#" class="profile-icon" id="profileBtn"><i class="fas fa-user"></i></a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Modal -->
+<div class="profile-modal" id="profileModal">
+    <div class="modal-content">
+        <!-- This content will be dynamically updated by AuthService -->
+    </div>
+</div>
+
+    <!-- Main Content Area -->
+    <div class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2>Glow Up with Our Natural Skincare Products</h2>
+                <a href="#" class="btn catalog-link">Explore Collections</a>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="collections" id="collections">
+            <h2 class="section-title">Our Featured Collections</h2>
+        </section>
+
+        <!-- Best Sellers -->
+      <section class="collections">
+    <div class="container">
+        <!-- Featured products will be loaded here by JavaScript -->
+    </div>
+</section>
+
+<!-- KEEP THE BUTTON OUTSIDE -->
+<div class="container center-btn">
+    <a href="#" class="btn catalog-link">View All Products</a>
+</div>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="section-title">About RoiBeautyEssence</h2>
+                <p>Founded in 2015, RoiBeautyEssence has been creating effective skincare solutions that combine natural ingredients with scientific research. Each product in our collection is carefully formulated by our skincare experts using only ethically sourced, high-quality ingredients.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Natural Ingredients</h3>
+                        <p>Plant-based formulas with no harsh chemicals</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h3>Dermatologist Tested</h3>
+                        <p>Safe and effective for all skin types</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Sustainable Packaging</h3>
+                        <p>Eco-friendly and recyclable materials</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+    
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Join Our Beauty Club</h2>
+                <p>Enjoy exclusive offers, early access to new products, and skincare tips.</p>    
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-info">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <p>+447721539728</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>babaitarukayat@gmail.com</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-location"></i>
+            <p>United Kingdom</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <p>Mon-Sat: 10 AM - 7 PM</p>
+        </div>
+        <div class="social-links">
+            <!--<a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>-->
+            <a href="https://www.tiktok.com/@scentsbyroi?_r=1&_t=ZN-91ius5b6IBG"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h3>Have Questions?</h3>
+        <form id="contactForm">
+            <input type="text" id="contactName" placeholder="Your Name" required>
+            <input type="email" id="contactEmail" placeholder="Your Email" required>
+            <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn" id="contactBtn">Send Message</button>
+        </form>
+    </div>
+</section>
+    </div>
+
+     <!-- Product Catalog Page -->
+    <div class="catalog-page" id="catalogPage">
+        <div class="container">
+            <h1 class="page-title">Our Complete Skincare Collection</h1>
+            
+            <div class="catalog-header">
+                <div class="catalog-filters">
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="cleansers">Cleansers</option>
+                        <option value="serums">Serums</option>
+                        <option value="moisturizers">Moisturizers</option>
+                        <option value="masks">Masks</option>
+                        <option value="eye-care">Eye Care</option>
+                    </select>
+                    
+                    <select class="filter-select" id="skinTypeFilter">
+                        <option value="all">All Skin Types</option>
+                        <option value="dry">Dry Skin</option>
+                        <option value="oily">Oily Skin</option>
+                        <option value="combination">Combination</option>
+                        <option value="sensitive">Sensitive</option>
+                    </select>
+                    
+                    <select class="filter-select" id="priceFilter">
+                        <option value="all">All Prices</option>
+                        <option value="under20">Under €20</option>
+                        <option value="20to40">€20 - €40</option>
+                        <option value="over40">Over €40</option>
+                    </select>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="productSearch" placeholder="Search products...">
+                </div>
+            </div>
+            
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div class="cart-page" id="cartPage">
+        <div class="container">
+            <h1 class="page-title">Your Shopping Cart</h1>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                    <div class="empty-cart-message" id="emptyCartMessage">
+                        <p>Your cart is empty</p>
+                        <a href="#" class="btn catalog-link">Continue Shopping</a>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3 class="summary-title">Order Summary</h3>
+                    
+                    
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span id="cartTotal">€0.00</span>
+                    </div>
+                    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+                    <a href="#" class="continue-shopping home-link">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page -->
+<div class="product-detail-page" id="productDetailPage" style="display: none;">
+    <!-- Content will be dynamically added -->
+</div>
+
+  <!-- Payment Page -->
+<div class="payment-page" id="paymentPage" style="display: none;">
+    <div class="container">
+        <h1 class="page-title">Checkout</h1>
+        <div class="payment-container">
+            <div class="payment-form">
+                <h3>Shipping Information</h3>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Street Address *</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">Postcode *</label>
+                        <input type="text" id="zipCode" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="GB" selected>United Kingdom</option>
+                        <option value="IE">Ireland</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="NG">Nigeria</option>
+                    </select>
+                </div>
+
+                <h3 style="margin-top: 30px;">Payment Method</h3>
+                <div class="payment-methods-info">
+                    <p>Secure payments powered by Stripe</p>
+                </div>
+                
+                
+                
+                <!-- Card Element (fallback) -->
+                <div id="stripe-card-element" class="stripe-card-element">
+    <!-- Card input will appear here -->
+</div>
+                
+                <div id="stripe-payment-errors" class="stripe-payment-errors" role="alert"></div>
+                <div id="stripe-card-errors" class="stripe-card-errors" role="alert"></div>
+
+                <button class="btn checkout-btn" id="stripeCheckoutBtn">
+                    <i class="fas fa-lock"></i> Pay Now
+                </button>
+
+                <div class="payment-methods-icons">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fab fa-apple-pay" title="Apple Pay"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                    <i class="fas fa-university" title="Bank Transfer"></i>
+                </div>
+
+                <!--<div class="test-card-info">
+                    <h4><i class="fas fa-credit-card"></i> Test Card Information</h4>
+                    <p><strong>Card Number:</strong> 4242 4242 4242 4242</p>
+                    <p><strong>Expiry Date:</strong> Any future date (e.g., 12/34)</p>
+                    <p><strong>CVC:</strong> Any 3 digits (e.g., 123)</p>
+                    <p><strong>ZIP/Postcode:</strong> Any valid postcode</p>
+                    <p><em>Use this test card for payments in test mode</em></p>
+                </div>-->
+
+                <div class="security-notice">
+                    <i class="fas fa-lock"></i>
+                    <span>Your payment is secure and encrypted. We never store card details.</span>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="orderItems">
+                    <!-- Order items will be dynamically added here -->
+                </div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="orderSubtotal">€0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="orderTotal">€0.00</span>
+                </div>
+                <div>Card Number: 4242 4242 4242 4242
+Expiry Date: 12/34 (any future month/year)
+CVC: 123 (any 3 digits)
+Name: Test Customer
+ZIP: 12345 (any 5 digits)</div>
+                <div class="order-protection">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Protected by Buyer Protection</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="container">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your purchase. Your order has been confirmed and will be shipped soon.</p>
+            <p>Order ID: <span id="dynamicOrderId">Loading...</span></p>
+            <a href="catalogPage" class="btn catalog-link" style="margin-top: 20px;">Continue Shopping</a>
+        </div>
+    </div>
+    <!-- Terms Page -->
+<div id="termsPage" class="page" style="display: none;">
+    <div class="container">
+        <div id="termsContent">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RoiBeautyEssence</h3>
+                    <p>Elegance Redefined</p>
+                    <p>Where natural beauty begins.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="home-link">Home</a></li>
+                        <li><a href="#" class="catalog-link">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                         <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-apple-pay"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RoiBeautyEssence. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
